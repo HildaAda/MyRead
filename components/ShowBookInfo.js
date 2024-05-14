@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, FlatList, LayoutAnimation} from 'react-native';
+import { View, Text, TouchableOpacity, LayoutAnimation} from 'react-native';
 import { bookDetailsStyles } from './Styles';
 import { useNavigation } from '@react-navigation/native';
 import { auth } from '../firebase';
@@ -43,4 +43,4 @@ export default function ShowBookInfo({ bookIndustryIdentifier, title, authors, p
             )}
         </View>
     );
-}
+};

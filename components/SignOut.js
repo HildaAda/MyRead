@@ -9,7 +9,7 @@ const SignOut = () => {
       AsyncStorage.removeItem('user');
     } catch (error) {
       console.error('Sign out error:', error.message);
-    }
+    };
   };
 
   return (

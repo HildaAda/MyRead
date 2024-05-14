@@ -14,11 +14,11 @@ const getUsersBookList = async (user) => {
     } else {
       console.log('User document does not exist');
       return [];
-    }
+    };
   } catch (error) {
     console.error('Error getting user book list:', error);
     throw error;
-  }
+  };
 };
 
 export default getUsersBookList;

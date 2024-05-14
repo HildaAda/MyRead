@@ -23,11 +23,11 @@ export default function UsersBookList({ navigation }) {
         setLoading(false);
       } else {
         setUser(null);
-      }
+      };
     } catch (error) {
       console.error('Error fetching user data:', error);
       setLoading(false);
-    }
+    };
   };
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function UsersBookList({ navigation }) {
       <View style={loadingStyle.loading}>
         <ActivityIndicator size='large'/>
       </View>
-    );
+    )
   } else {
     return (
       <View style={userBookListStyles.listView}>
@@ -74,4 +74,4 @@ export default function UsersBookList({ navigation }) {
       </View>
     );
   };
-}
+};

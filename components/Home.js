@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, Button, StyleSheet, Text, View } from 'react-native';
+import { StatusBar, Button, Text, View } from 'react-native';
 import { signOutUser } from '../firebase';
 import { homeStyles } from './Styles';
 

@@ -21,11 +21,11 @@ export default function BookComments({ route }){
                     const bookComments = await getBookComments(bookIndustryIdentifier);
                     setComments(bookComments);
                     setLoading(false);
-                }
+                };
             } catch (error) {
                 console.error('Error fetching comments:', error);
                 setLoading(false);
-            }
+            };
         };
 
         fetchComments();
@@ -36,7 +36,7 @@ export default function BookComments({ route }){
             navigation.navigate('AddComment', { bookIndustryIdentifier, title});
         } else {
             console.error('Book industry identifier not found.');
-        }
+        };
     };
 
     if (loading) {
@@ -44,7 +44,7 @@ export default function BookComments({ route }){
           <View style={loadingStyle.loading}>
             <ActivityIndicator size='large'/>
           </View>
-        );
+        )
     } else {
         return(
             <View>
@@ -77,5 +77,5 @@ export default function BookComments({ route }){
                 />
             </View>
         );
-    }
-}
+    };
+};

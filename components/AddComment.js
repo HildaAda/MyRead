@@ -5,7 +5,7 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { addCommentStyles } from './Styles';
 
 export default function AddComment({ route }) {
-    const { bookIndustryIdentifier, title } = route.params; // Vastaanotetaan bookId navigaatioparametrina
+    const { bookIndustryIdentifier, title } = route.params;
     const [comment, setComment] = useState('');
     const currentUser = auth.currentUser;
 
@@ -18,7 +18,7 @@ export default function AddComment({ route }) {
             let updatedComments = [];
             if (docSnapshot.exists()) {
                 updatedComments = existingData.comments || [];
-            }
+            };
 
             const commentData = {
                 commentId: Math.random().toString(36).substring(7),
@@ -40,7 +40,7 @@ export default function AddComment({ route }) {
 
         } catch (error) {
             console.error('Error adding comment:', error);
-        }
+        };
     };
 
     return (
@@ -57,4 +57,4 @@ export default function AddComment({ route }) {
             <Button title="Add Comment" onPress={handleAddComment} />
         </View>
     );
-}
+};

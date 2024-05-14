@@ -22,10 +22,10 @@ export default function Search({ navigation }) {
           setUser(currentUser.uid);
       } else {
           setUser(null);
-        }
+        };
     } catch (error) {
       console.error('Error fetching user UID: ', error);
-      }
+      };
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Search({ navigation }) {
           setLoading(false);
           setBooks([]);
           return;
-        }
+        };
 
         const filteredBooks = data.items.filter(item => 
             item.volumeInfo.title &&
@@ -65,7 +65,7 @@ export default function Search({ navigation }) {
       .catch(err => {
           console.error(err)
           setLoading(false)
-      })
+      });
   };
 
 
@@ -80,7 +80,7 @@ export default function Search({ navigation }) {
       <View style={loadingStyle.loading}>
         <ActivityIndicator size='large'/>
       </View>
-    );
+    )
   } else {
     return (
       <View style={searchListStyles.container}>
@@ -132,5 +132,5 @@ export default function Search({ navigation }) {
         <StatusBar style="auto" />
       </View>
     );
-  }
-}
+  };
+};

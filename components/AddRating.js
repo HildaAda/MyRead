@@ -24,8 +24,8 @@ export default function AddRating({ bookIndustryIdentifier }) {
                     if (foundRating) {
                         setRating(foundRating.rating);
                         setIsRated(true)
-                    }
-                }
+                    };
+                };
             } catch (error) {
                 console.error('Error fetching user rating:', error);
             }
@@ -36,7 +36,7 @@ export default function AddRating({ bookIndustryIdentifier }) {
 
     const ratingCompleted = (rating) => {
         console.log('Rating is: ' + rating);
-        setRating(rating)
+        setRating(rating);
       };
 
       const handleAddRating = async () => {
@@ -90,4 +90,4 @@ export default function AddRating({ bookIndustryIdentifier }) {
             )}
         </View>
     );
-}
+};

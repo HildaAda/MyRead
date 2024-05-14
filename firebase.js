@@ -30,5 +30,5 @@ export const signOutUser = async () => {
     console.log('User signed out');
   } catch (error) {
     console.error('Sign out error:', error.message);
-  }
+  };
 };

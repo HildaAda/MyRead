@@ -7,8 +7,8 @@ import { doc, setDoc } from "firebase/firestore";
 import { signInStyles, loadingStyle } from './Styles';
 
 const SignIn = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -54,7 +54,7 @@ const SignIn = () => {
             console.log('Document created for new user');
         } catch (error) {
             console.error('Error creating document:', error);
-        }
+        };
     };
 
     if (loading) {
@@ -62,7 +62,7 @@ const SignIn = () => {
           <View style={loadingStyle.loading}>
             <ActivityIndicator size='large'/>
           </View>
-        );
+        )
     } else {
         return (
             <View style={signInStyles.container}>
@@ -90,7 +90,7 @@ const SignIn = () => {
             <StatusBar style="auto" />
             </View>
         );
-    }
-}
+    };
+};
 
 export default SignIn

@@ -14,11 +14,11 @@ const getBookComments = async (bookIndustryIdentifier) => {
     } else {
       console.log('Document does not exist');
       return [];
-    }
+    };
   } catch (error) {
     console.error('Error getting book comments:', error);
     throw error;
-  }
+  };
 };
 
 export default getBookComments;

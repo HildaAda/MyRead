@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, ScrollView } from 'react-native';
+import { View } from 'react-native';
 import { Rating } from '@rneui/themed';
 
-const Ratings = () => {
+export const Ratings = () => {
   const ratingCompleted = (rating) => {
     console.log('Rating is: ' + rating);
   };
@@ -26,5 +26,3 @@ const Ratings = () => {
     </View>
   );
 };
-
-export default Ratings;

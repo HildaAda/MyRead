@@ -9,13 +9,13 @@ export const deleteComment = async ({ bookIndustryIdentifier, commentId, setComm
         if (!bookSnapshot.exists()) {
             console.error("Book document does not exist.");
             return;
-        }
+        };
 
         const bookData = bookSnapshot.data();
         if (!bookData.comments || !bookData.comments.some(comment => comment.commentId === commentId)) {
             console.error("Comment not found on this book.");
             return;
-        }
+        };
 
         const updatedComments = bookData.comments.filter(comment => comment.commentId !== commentId);
 
@@ -28,6 +28,6 @@ export const deleteComment = async ({ bookIndustryIdentifier, commentId, setComm
         setComments(updatedComments);
     } catch (error) {
         console.error('Error deleting comment:', error);
-    }
-}
+    };
+};
 

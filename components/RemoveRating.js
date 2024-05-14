@@ -9,13 +9,13 @@ export const removeRating = async ({ bookIndustryIdentifier, currentUserUid, set
         if (!bookSnapshot.exists()) {
             console.error("Book document does not exist.");
             return;
-        }
+        };
 
         const bookData = bookSnapshot.data();
         if (!bookData.ratings || !bookData.ratings.some(ratings => ratings.userId === currentUserUid)) {
             console.error("Ratings not found on this book.");
             return;
-        }
+        };
 
         const updatedRatings = bookData.ratings.filter(ratings => ratings.userId!== currentUserUid);
 
@@ -28,5 +28,5 @@ export const removeRating = async ({ bookIndustryIdentifier, currentUserUid, set
         setRating(updatedRatings);
     } catch (error) {
         console.error('Error removing rating:', error);
-    }
-}
+    };
+};

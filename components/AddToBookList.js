@@ -28,6 +28,6 @@ export const addToBookList = async (userUid, book) => {
     } catch (error) {
         console.error('Error adding book to user book list:', error);
     };
-}
+};
 
 export default addToBookList;

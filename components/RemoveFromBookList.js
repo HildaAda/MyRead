@@ -1,5 +1,5 @@
 import { db } from '../firebase';
-import { doc, getDoc, updateDoc, arrayRemove, arrayUnion } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 
 const removeFromBookList = async (userUid, book, setBookList) => {
     const userBookListRef = doc(db, 'users', userUid);
@@ -10,13 +10,13 @@ const removeFromBookList = async (userUid, book, setBookList) => {
         if (!snapshot.exists()) {
             console.error("Document does not exist.");
             return;
-        }
+        };
 
         const userData = snapshot.data();
         const updatedBookList = userData.userbooklist.filter(item => {
             if (item.industryIdentifiers[0].identifier === industryIdentifier) {
                 return false;
-            }
+            };
             return true;
         });
 
@@ -29,7 +29,7 @@ const removeFromBookList = async (userUid, book, setBookList) => {
         setBookList(updatedBookList);
     } catch (error) {
         console.error('Error removing book from user book list:', error);
-    }
-}
+    };
+};
 
-export default removeFromBookList;
+export default removeFromBookList
