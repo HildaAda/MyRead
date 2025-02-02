@@ -11,12 +11,12 @@ A book app where users can save books, rate them with stars, write reviews, and 
 
 ### Screenshots
 
-![Search view](screenshots/search.jpg)
+<img src="screenshots/search.jpg" alt="Search view" width="600" height="auto"/>
 
-![Book list view](screenshots/booklist.jpg)
+<img src="screenshots/booklist.jpg" alt="Book list view" width="600" height="auto"/>
 
-![Book info view](screenshots/bookinfo.jpg)
+<img src="screenshots/bookinfo.jpg" alt="Book info view" width="600" height="auto"/>
 
-![Add comment view](screenshots/addcomment.jpg)
+<img src="screenshots/addcomment.jpg" alt="Add comment view" width="600" height="auto"/>
 
-![Comments view](screenshots/comments.jpg)
+<img src="screenshots/comments.jpg" alt="Comments view" width="600" height="auto"/>
